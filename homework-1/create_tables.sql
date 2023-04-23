@@ -1,17 +1,17 @@
 -- SQL-команды для создания таблиц
 CREATE TABLE employees
 (
-	first_name varchar(30) NOT NULL,
-	last_name varchar(30) NOT NULL,
+	first_name varchar(50) NOT NULL,
+	last_name varchar(50) NOT NULL,
 	title varchar(100) NOT NULL,
-	birth_date date NOT NULL,
+	birth_date date,
 	notes text
 );
 
 
 CREATE TABLE customers
 (
-	customer_id varchar(30) PRIMARY KEY,
+	customer_id varchar(50) PRIMARY KEY,
 	company_name varchar(100) NOT NULL,
 	contact_name varchar(100) NOT NULL
 );

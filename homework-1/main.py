@@ -30,14 +30,14 @@ try:
                 reader = csv.reader(csvfile, delimiter=',', quotechar='"')
                 next(reader)
                 for row in reader:
-                    cur.execute("INSERT INTO employees VALUES (%s, %s, %s)", row)
+                    cur.execute("INSERT INTO customers VALUES (%s, %s, %s)", row)
 
             """Получение данных из таблицы orders_data.csv"""
             with open('north_data/orders_data.csv', newline='', encoding='utf-8') as csvfile:
                 reader = csv.reader(csvfile, delimiter=',', quotechar='"')
                 next(reader)
                 for row in reader:
-                    cur.execute("INSERT INTO employees VALUES (%s, %s, %s, %s, %s)", row)
+                    cur.execute("INSERT INTO orders VALUES (%s, %s, %s, %s, %s)", row)
 finally:
     # Закрывается курсор с помощью метода cur.close().
     # Закрывается соединение с базой данных с помощью метода conn.close()
