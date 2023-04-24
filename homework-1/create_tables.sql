@@ -23,5 +23,5 @@ CREATE TABLE orders
 	customer_id varchar(30) REFERENCES customers(customer_id),
 	employee_id int NOT NULL ,
 	order_date date NOT NULL,
-	ship_city varchar(15) NOT NULL
+	ship_city varchar(100) NOT NULL
 );
